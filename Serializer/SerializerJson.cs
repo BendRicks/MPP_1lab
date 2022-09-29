@@ -6,6 +6,11 @@ namespace Serializer;
 
 public class SerializerJson : ISerializer
 {
+    public string Format()
+    {
+        return "json";
+    }
+    
     public string Serialize(TraceResult result)
     {
         var serializeOptions = new JsonSerializerOptions

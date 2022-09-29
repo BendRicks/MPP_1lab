@@ -8,6 +8,11 @@ namespace Serializer;
 
 public class SerializerXml : ISerializer
 {
+    public string Format()
+    {
+        return "xml";
+    }
+    
     public string Serialize(TraceResult result)
     {
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(TraceResult));
